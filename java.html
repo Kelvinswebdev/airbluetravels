@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="java.css">
+</head>
+<body>
+    <button id="rotateButton">click me</button>
+
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+
+
+    <script>
+        const button = document.getElementById('rotateButton');
+        const divs = document.querySelectorAll('.box');
+
+        button.addEventListener('click', () => {
+        const rotateValue = divs[2].style.transform === 'rotate(90deg)' ? 'rotate(0deg)' : 'rotate(90deg)';
+        divs.forEach(div => div.style.transform = rotateValue);
+        });
+    </script>
+</body>
+</html>
